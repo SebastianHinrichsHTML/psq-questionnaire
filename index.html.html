@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSQ - Perceived Stress Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PSQ - Perceived Stress Questionnaire (PSQ-30)</h1>
+    <p>
+        In den folgenden Fragen finden Sie eine Reihe von Feststellungen. Bitte lesen Sie jede Feststellung durch und wählen Sie aus den vier Antworten diejenige aus, die angibt, wie häufig die Feststellung auf Ihr Leben in den letzten 4 Wochen zutrifft. Es gibt keine richtigen oder falschen Antworten. Überlegen Sie bitte nicht lange.
+    </p>
+    
+    <form id="psqForm">
+        <!-- Verpflichtungserklärung -->
+        <p>
+            Mit der Nutzung des Verfahrens verpflichte ich mich, die Bedingungen der <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Lizenz CC BY-NC-ND 4.0</a> zu beachten.
+        </p>
+
+        <hr>
+
+        <!-- Fragenliste -->
+        <ol>
+            <li class="question">
+                <label>01. Sie fühlen sich ausgeruht:</label><br>
+                <input type="radio" name="str01" value="1" required> Fast nie<br>
+                <input type="radio" name="str01" value="2"> Manchmal<br>
+                <input type="radio" name="str01" value="3"> Häufig<br>
+                <input type="radio" name="str01" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>02. Sie haben das Gefühl, dass zu viele Forderungen an Sie gestellt werden:</label><br>
+                <input type="radio" name="str02" value="1" required> Fast nie<br>
+                <input type="radio" name="str02" value="2"> Manchmal<br>
+                <input type="radio" name="str02" value="3"> Häufig<br>
+                <input type="radio" name="str02" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>03. Sie sind gereizt oder grantig:</label><br>
+                <input type="radio" name="str03" value="1" required> Fast nie<br>
+                <input type="radio" name="str03" value="2"> Manchmal<br>
+                <input type="radio" name="str03" value="3"> Häufig<br>
+                <input type="radio" name="str03" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>04. Sie haben zuviel zu tun:</label><br>
+                <input type="radio" name="str04" value="1" required> Fast nie<br>
+                <input type="radio" name="str04" value="2"> Manchmal<br>
+                <input type="radio" name="str04" value="3"> Häufig<br>
+                <input type="radio" name="str04" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>05. Sie fühlen sich einsam oder isoliert:</label><br>
+                <input type="radio" name="str05" value="1" required> Fast nie<br>
+                <input type="radio" name="str05" value="2"> Manchmal<br>
+                <input type="radio" name="str05" value="3"> Häufig<br>
+                <input type="radio" name="str05" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>06. Sie befinden sich in Konfliktsituationen:</label><br>
+                <input type="radio" name="str06" value="1" required> Fast nie<br>
+                <input type="radio" name="str06" value="2"> Manchmal<br>
+                <input type="radio" name="str06" value="3"> Häufig<br>
+                <input type="radio" name="str06" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>07. Sie haben das Gefühl, Dinge zu tun, die Sie wirklich mögen:</label><br>
+                <input type="radio" name="str07" value="1" required> Fast nie<br>
+                <input type="radio" name="str07" value="2"> Manchmal<br>
+                <input type="radio" name="str07" value="3"> Häufig<br>
+                <input type="radio" name="str07" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>08. Sie fühlen sich müde:</label><br>
+                <input type="radio" name="str08" value="1" required> Fast nie<br>
+                <input type="radio" name="str08" value="2"> Manchmal<br>
+                <input type="radio" name="str08" value="3"> Häufig<br>
+                <input type="radio" name="str08" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>09. Sie fürchten, Ihre Ziele nicht erreichen zu können:</label><br>
+                <input type="radio" name="str09" value="1" required> Fast nie<br>
+                <input type="radio" name="str09" value="2"> Manchmal<br>
+                <input type="radio" name="str09" value="3"> Häufig<br>
+                <input type="radio" name="str09" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>10. Sie fühlen sich ruhig:</label><br>
+                <input type="radio" name="str10" value="1" required> Fast nie<br>
+                <input type="radio" name="str10" value="2"> Manchmal<br>
+                <input type="radio" name="str10" value="3"> Häufig<br>
+                <input type="radio" name="str10" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>11. Sie müssen zu viele Entscheidungen treffen:</label><br>
+                <input type="radio" name="str11" value="1" required> Fast nie<br>
+                <input type="radio" name="str11" value="2"> Manchmal<br>
+                <input type="radio" name="str11" value="3"> Häufig<br>
+                <input type="radio" name="str11" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>12. Sie fühlen sich frustriert:</label><br>
+                <input type="radio" name="str12" value="1" required> Fast nie<br>
+                <input type="radio" name="str12" value="2"> Manchmal<br>
+                <input type="radio" name="str12" value="3"> Häufig<br>
+                <input type="radio" name="str12" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>13. Sie sind voller Energie:</label><br>
+                <input type="radio" name="str13" value="1" required> Fast nie<br>
+                <input type="radio" name="str13" value="2"> Manchmal<br>
+                <input type="radio" name="str13" value="3"> Häufig<br>
+                <input type="radio" name="str13" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>14. Sie fühlen sich angespannt:</label><br>
+                <input type="radio" name="str14" value="1" required> Fast nie<br>
+                <input type="radio" name="str14" value="2"> Manchmal<br>
+                <input type="radio" name="str14" value="3"> Häufig<br>
+                <input type="radio" name="str14" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>15. Sie sind traurig:</label><br>
+                <input type="radio" name="str15" value="1" required> Fast nie<br>
+                <input type="radio" name="str15" value="2"> Manchmal<br>
+                <input type="radio" name="str15" value="3"> Häufig<br>
+                <input type="radio" name="str15" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>16. Sie fühlen sich zufrieden:</label><br>
+                <input type="radio" name="str16" value="1" required> Fast nie<br>
+                <input type="radio" name="str16" value="2"> Manchmal<br>
+                <input type="radio" name="str16" value="3"> Häufig<br>
+                <input type="radio" name="str16" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>17. Sie haben das Gefühl, dass andere von Ihnen abhängig sind:</label><br>
+                <input type="radio" name="str17" value="1" required> Fast nie<br>
+                <input type="radio" name="str17" value="2"> Manchmal<br>
+                <input type="radio" name="str17" value="3"> Häufig<br>
+                <input type="radio" name="str17" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>18. Sie haben genug Zeit für sich selbst:</label><br>
+                <input type="radio" name="str18" value="1" required> Fast nie<br>
+                <input type="radio" name="str18" value="2"> Manchmal<br>
+                <input type="radio" name="str18" value="3"> Häufig<br>
+                <input type="radio" name="str18" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>19. Sie sind in Eile:</label><br>
+                <input type="radio" name="str19" value="1" required> Fast nie<br>
+                <input type="radio" name="str19" value="2"> Manchmal<br>
+                <input type="radio" name="str19" value="3"> Häufig<br>
+                <input type="radio" name="str19" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>20. Sie haben Schwierigkeiten, eine Entscheidung zu treffen:</label><br>
+                <input type="radio" name="str20" value="1" required> Fast nie<br>
+                <input type="radio" name="str20" value="2"> Manchmal<br>
+                <input type="radio" name="str20" value="3"> Häufig<br>
+                <input type="radio" name="str20" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>21. Sie fühlen sich unter Druck:</label><br>
+                <input type="radio" name="str21" value="1" required> Fast nie<br>
+                <input type="radio" name="str21" value="2"> Manchmal<br>
+                <input type="radio" name="str21" value="3"> Häufig<br>
+                <input type="radio" name="str21" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>22. Sie haben das Gefühl, die Kontrolle zu verlieren:</label><br>
+                <input type="radio" name="str22" value="1" required> Fast nie<br>
+                <input type="radio" name="str22" value="2"> Manchmal<br>
+                <input type="radio" name="str22" value="3"> Häufig<br>
+                <input type="radio" name="str22" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>23. Sie genießen das Leben:</label><br>
+                <input type="radio" name="str23" value="1" required> Fast nie<br>
+                <input type="radio" name="str23" value="2"> Manchmal<br>
+                <input type="radio" name="str23" value="3"> Häufig<br>
+                <input type="radio" name="str23" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>24. Sie haben das Gefühl, dass Sie genug für andere tun:</label><br>
+                <input type="radio" name="str24" value="1" required> Fast nie<br>
+                <input type="radio" name="str24" value="2"> Manchmal<br>
+                <input type="radio" name="str24" value="3"> Häufig<br>
+                <input type="radio" name="str24" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>25. Sie fühlen sich gut:</label><br>
+                <input type="radio" name="str25" value="1" required> Fast nie<br>
+                <input type="radio" name="str25" value="2"> Manchmal<br>
+                <input type="radio" name="str25" value="3"> Häufig<br>
+                <input type="radio" name="str25" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>26. Sie haben das Gefühl, dass andere zu viel von Ihnen erwarten:</label><br>
+                <input type="radio" name="str26" value="1" required> Fast nie<br>
+                <input type="radio" name="str26" value="2"> Manchmal<br>
+                <input type="radio" name="str26" value="3"> Häufig<br>
+                <input type="radio" name="str26" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>27. Sie haben das Gefühl, etwas gegen Ihren Willen tun zu müssen:</label><br>
+                <input type="radio" name="str27" value="1" required> Fast nie<br>
+                <input type="radio" name="str27" value="2"> Manchmal<br>
+                <input type="radio" name="str27" value="3"> Häufig<br>
+                <input type="radio" name="str27" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>28. Sie fühlen sich in der Lage, alles zu erreichen:</label><br>
+                <input type="radio" name="str28" value="1" required> Fast nie<br>
+                <input type="radio" name="str28" value="2"> Manchmal<br>
+                <input type="radio" name="str28" value="3"> Häufig<br>
+                <input type="radio" name="str28" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>29. Sie fühlen sich überlastet:</label><br>
+                <input type="radio" name="str29" value="1" required> Fast nie<br>
+                <input type="radio" name="str29" value="2"> Manchmal<br>
+                <input type="radio" name="str29" value="3"> Häufig<br>
+                <input type="radio" name="str29" value="4"> Meistens<br>
+            </li>
+            <li class="question">
+                <label>30. Sie können sich entspannen:</label><br>
+                <input type="radio" name="str30" value="1" required> Fast nie<br>
+                <input type="radio" name="str30" value="2"> Manchmal<br>
+                <input type="radio" name="str30" value="3"> Häufig<br>
+                <input type="radio" name="str30" value="4"> Meistens<br>
+            </li>
+        </ol>
+
+        <button type="button" onclick="calculateResults()">Ergebnisse berechnen</button>
+
+        <div class="result" id="result"></div>
+    </form>
+
+    <script>
+     function calculateResults() {
+    const form = document.getElementById('psqForm');
+    const formData = new FormData(form);
+    let score = 0;
+    let adjustedScore = 0;
+    let resultDetails = ''; // Für die detaillierte Ausgabe
+
+    // Fragen, deren Scores von 5 abgezogen werden
+    const adjustItems = ['str01', 'str07', 'str10', 'str13', 'str17', 'str21', 'str25', 'str29'];
+
+    formData.forEach((value, key) => {
+        const numericValue = parseInt(value, 10);
+        let adjustedValue;
+
+        // Scores der ausgewählten Fragen anpassen
+        if (adjustItems.includes(key)) {
+            adjustedValue = 5 - numericValue;
+            resultDetails += `Frage ${key.replace('str', '')}: Ursprünglicher Wert = ${numericValue}, Angepasster Wert = ${adjustedValue}<br>`;
+        } else {
+            adjustedValue = numericValue;
+            resultDetails += `Frage ${key.replace('str', '')}: Wert = ${numericValue}<br>`;
+        }
+
+        adjustedScore += adjustedValue;
+    });
+
+    // Mittelwert berechnen
+    const psqMean = adjustedScore / 30;
+    resultDetails += `<br>Summe der angepassten Punktwerte: ${adjustedScore}<br>`;
+    resultDetails += `Mittelwert (PSQ Mean): ${psqMean.toFixed(2)}<br>`;
+
+    // PSQ Wert berechnen
+    const psq = ((psqMean - 1) / 3) * 100;
+    resultDetails += `PSQ-Wert (skaliert von 0 bis 100): ${psq.toFixed(2)}<br>`;
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = resultDetails; // Anzeige der detaillierten Ergebnisse
+}
+
+    </script>
+
+</body>
+</html>
